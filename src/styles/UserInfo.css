@@ -1,0 +1,26 @@
+body {margin: 0; padding: 0;}
+ul { list-style: none; }
+.user-avatar img { width: 100px; border-radius: 50%; overflow: hidden; height: 100px; }
+.user-avatar p { 
+    display: none; 
+    width: 150px;
+    position: absolute;
+    margin: -30px 0 0 40px;
+    border: 1px solid white;
+    background: black;
+    font: 10px Verdana;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    }
+
+
+div {
+    width: 100px;
+    height: 100px;
+}
+
+.user-avatar:hover p { 
+    display:block;
+}
