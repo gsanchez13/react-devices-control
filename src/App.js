@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import Gadget from './containers/components/Gadget';
 import './App.css';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div className="container-fluid">
+                <div className="row">
+                    <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <Gadget userInfo={ this.props.gadget.userInfo } deviceInfo={ this.props.gadget.deviceInfo }/>
+                    </div>
+                    <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <Gadget userInfo={ this.props.gadget.userInfo } deviceInfo={ this.props.gadget.deviceInfo }/>
+                    </div>
+                    <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <Gadget userInfo={ this.props.gadget.userInfo } deviceInfo={ this.props.gadget.deviceInfo }/>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default App;
