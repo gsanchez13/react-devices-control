@@ -9,21 +9,17 @@ import ResultBodyCard from '../components/ResultBodyCard';
 //import '../assets/bootstrap.min.css';
 
 class CardListContainer extends Component {
-    
-    constructor(props){
-        super(props);
-    }
-    
+
     render() {
         return (
-           <Request
+            <Request
                 url='http://172.16.57.242:3080/gadget'
                 method='get'
                 accept='application/json'
                 verbose={true}>
                 {
                     ({error, result, loading}) => {
-                        if(error){
+                        if (error) {
                             return <div>{error}</div>;
                         }
 

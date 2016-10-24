@@ -11,18 +11,18 @@ class Gadget extends Component {
         return (
             <Card className="Card-content">
                 <CardHeader className="Card-header">
-                    <UserInfo userInfo={ this.props.userInfo } className="User-picture"/>
+                    <UserInfo userInfo={this.props.userInfo} className="User-picture" />
                     <div className="User-info">
-                        { this.props.userInfo.name }
+                        {this.props.userInfo.name}
                     </div>
                     <div className="User-mail">
-                        { this.props.userInfo.email }
+                        {this.props.userInfo.email}
                     </div>
-                    <ActionMenu/>
+                    <ActionMenu />
                 </CardHeader>
-                <hr className="Divider"/>
-                <CardText>
-                    <DeviceInfo deviceInfo={ this.props.deviceInfo } className="Device"/>
+                <hr className="Divider" />
+                <CardText className="Card-text">
+                    <DeviceInfo deviceInfo={this.props.deviceInfo} className="Device" />
                 </CardText>
             </Card>
         );

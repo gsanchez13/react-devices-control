@@ -1,0 +1,8 @@
+.Card-container{
+    padding: 5px;
+}
+
+.Card-list{
+    display: flex;
+    flex-wrap: wrap;
+}

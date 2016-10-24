@@ -1,4 +1,4 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 
 
 class Row extends Component {
@@ -6,15 +6,15 @@ class Row extends Component {
         return (
             <div className="row">
                 <div className="columnLabel">{this.props.label}</div>
-                <div  className="columnValue">{this.props.value}</div>
+                <div className="columnValue">{this.props.value}</div>
             </div>
         );
     }
 }
 
 Row.propTypes = {
-  label: PropTypes.string,
-  value: PropTypes.string
+    label: PropTypes.string,
+    value: PropTypes.string,
 };
 
 export default Row;

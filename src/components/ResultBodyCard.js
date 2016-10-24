@@ -1,20 +1,21 @@
 import React, { Component } from 'react';
-
+import Gadget from '../containers/components/Gadget'
+import './ResultBodyCard.css';
 class ResultBodyCard extends Component {
-    
-    constructor(props){
-        super(props);
-    }
-    
+
     render() {
         return (
-        <div>
-        {
-           this.props.list.map((card)=>{
-                return <div key={card.pin}>{ JSON.stringify(card) }</div>
-            })
-        }
-         </div>
+            <div className="Card-list">
+                {
+                    this.props.list.map((card) => {
+                        return (
+                            <div key={card.pin} className="Card-container">
+                                <Gadget userInfo={card.userInfo} deviceInfo={card.deviceInfo}>{JSON.stringify(card)}</Gadget>
+                            </div>
+                        )
+                    })
+                }
+            </div>
         );
     }
 }

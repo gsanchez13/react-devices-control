@@ -1,27 +1,30 @@
-div {
-    width: auto;
-    height: auto;
-}
-
 .Card-content {
     height: auto;
-    margin-top: 30px;
     border: 10px;
+    max-width: 310px;
+    min-width: 310px;
+    max-height: 210px;
+    min-height: 210px;
 }
 
 .Card-header {
     height: auto;
     font-size: 0.9rem;
+    padding: 5px !important; /* !important? Really? :( */
+}
+
+.Card-text {
+    height: auto;
+    font-size: 0.9rem;
+    padding: 5px !important; /* !important? Really? :( */
 }
 
 .User-picture {
     width: 55px;
     height: 55px;
-    margin-left: 4px;
-    margin-top: -7px;
     border-radius: 50%;
-    display: inline-block;
     float: left;
+    padding-right: 5px;
 }
 
 .User-picture img {
@@ -34,15 +37,12 @@ div {
 }
 
 .User-info {
-    margin-top: 3px;
-    margin-left: 20px;
-    float: left;
+    /*
+    TODO
+    */
 }
 
 .User-mail {
-    margin-top: 3px;
-    margin-left: 19px;
-    float: left;
     color: rgb(0, 99, 0);
     font-weight: 400;
 }
@@ -53,258 +53,12 @@ div {
 }
 
 .Device img {
-    height: auto;
-    margin-top: -16px;
-    margin-left: -20px;
+    height: 90px;
+    width: 90px;
 }
 
 .Divider {
-    margin-top: 26px;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-@media only screen and (min-width: 371px) and (max-width: 416px) {
-
-    .User-info {
-        margin-top: 5px;
-        margin-left: 21px;
-    }
-
-    .User-mail {
-        margin-top: 5px;
-        margin-left: 20px;
-        float: left;
-    }
-}
-
-@media only screen and (min-width: 417px) and (max-width: 447px) {
-
-    .Card-header {
-        font-size: 1rem;
-    }
-
-    .User-picture {
-        width: 60px;
-        height: 60px;
-        margin-top: -4px;
-    }
-
-    .User-info {
-        margin-top: 5px;
-        margin-left: 25px;
-    }
-
-    .User-mail {
-        margin-top: 5px;
-        margin-left: 24px;
-    }
-
-    .Divider {
-        margin-top: 34px;
-    }
-}
-
-@media only screen and (min-width: 448px) and (max-width: 485px) {
-
-    .Card-content {
-        height: 265px;
-    }
-
-    .Card-header {
-        font-size: 1rem;
-    }
-
-    .User-picture {
-        width: 60px;
-        height: 60px;
-        margin-top: -4px;
-    }
-
-    .User-info {
-        margin-top: 5px;
-        margin-left: 25px;
-    }
-
-    .User-mail {
-        margin-top: 10px;
-        margin-left: 88px;
-        float: none;
-    }
-
-    .Device {
-        font-size: 0.9rem;
-    }
-
-    .Divider {
-        margin-top: 5px;
-    }
-}
-
-@media only screen and (min-width: 486px) and (max-width: 512px) {
-
-    .Card-content {
-        height: 265px;
-    }
-
-    .Card-header {
-        font-size: 1rem;
-    }
-
-    .User-picture {
-        width: 60px;
-        height: 60px;
-        margin-top: -4px;
-    }
-
-    .User-info {
-        margin-top: 5px;
-        margin-left: 25px;
-    }
-
-    .User-mail {
-        margin-top: 10px;
-        margin-left: 88px;
-        float: none;
-    }
-
-    .Device {
-        font-size: 0.9rem;
-    }
-
-    .Divider {
-        margin-top: 5px;
-    }
-}
-
-@media only screen and (min-width: 513px) and (max-width: 1023px) {
-
-    .Card-header {
-        font-size: 1rem;
-    }
-
-    .User-picture {
-        width: 60px;
-        height: 60px;
-        margin-top: -4px;
-    }
-
-    .User-info {
-        margin-top: 5px;
-        margin-left: 25px;
-    }
-
-    .User-mail {
-        margin-top: 10px;
-        margin-left: 88px;
-        float: none;
-    }
-
-    .Device {
-        font-size: 0.9rem;
-    }
-
-    .Divider {
-        margin-top: 5px;
-    }
-}
-
-@media only screen and (min-width: 1024px) and (max-width: 1033px) {
-
-    .Card-header {
-        font-size: 1rem;
-    }
-
-    .User-picture {
-        width: 60px;
-        height: 60px;
-        margin-top: -4px;
-    }
-
-    .User-info {
-        margin-top: -14px;
-        margin-left: 24px;
-    }
-
-    .User-mail {
-        margin-top: 5px;
-        margin-left: 23px;
-        float: left;
-    }
-
-    .Device {
-        font-size: 0.9rem;
-    }
-
-    .Divider {
-        margin-top: 34px;
-    }
-}
-
-@media only screen and (min-width: 1034px) and (max-width: 1227px) {
-
-    .Card-header {
-        font-size: 1rem;
-    }
-
-    .User-picture {
-        width: 60px;
-        height: 60px;
-        margin-top: -4px;
-    }
-
-    .User-info {
-        margin-top: 5px;
-        margin-left: 24px;
-    }
-
-    .User-mail {
-        margin-top: 9px;
-        margin-left: 87px;
-        float: none;
-    }
-
-    .Device {
-        font-size: 0.9rem;
-    }
-
-    .Divider {
-        margin-top: 6px;
-    }
-}
-
-@media only screen and (min-width: 1228px) and (max-width: 1414px) {
-
-    .Card-content {
-        height: 265px;
-    }
-
-    .Card-header {
-        font-size: 1rem;
-    }
-
-    .Device {
-        font-size: 0.9rem;
-    }
-
-    .User-picture {
-        width: 60px;
-        height: 60px;
-        margin-top: -4px;
-    }
-
-    .User-info {
-        margin-top: 5px;
-        margin-left: 24px;
-    }
-
-    .User-mail {
-        margin-top: 9px;
-        margin-left: 87px;
-        float: none;
-    }
-
-    .Divider {
-        margin-top: 6px;
-    }
+    /*
+    TODO
+    */
 }
