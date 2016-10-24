@@ -1,0 +1,22 @@
+.DeviceInfo {
+    display: flex;
+    padding: 5px;
+}
+.DeviceInfo .row {
+    display: flex;
+}
+.DeviceInfo .columnLabel {
+    width: 120px;
+}
+.DeviceInfo .DeviceDivImg {
+    padding-right: 5px;
+}
+.DeviceInfo .DeviceImg {
+    max-width: 150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+}
+.DeviceInfo .DeviceDivInfo{
+    padding: 5px;
+}
