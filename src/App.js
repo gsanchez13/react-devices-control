@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Gadget from './containers/components/Gadget';
 import './App.css';
 
-import CardListContainer from './containers/CardListContainer'
+
 
 class App extends Component {
     render() {
@@ -10,13 +10,13 @@ class App extends Component {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <Gadget userInfo={ this.props.gadget.userInfo } deviceInfo={ this.props.gadget.deviceInfo }/>
+                        <Gadget userInfo={this.props.gadget.userInfo} deviceInfo={this.props.gadget.deviceInfo} />
                     </div>
                     <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <Gadget userInfo={ this.props.gadget.userInfo } deviceInfo={ this.props.gadget.deviceInfo }/>
+                        <Gadget userInfo={this.props.gadget.userInfo} deviceInfo={this.props.gadget.deviceInfo} />
                     </div>
                     <div className="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        <Gadget userInfo={ this.props.gadget.userInfo } deviceInfo={ this.props.gadget.deviceInfo }/>
+                        <Gadget userInfo={this.props.gadget.userInfo} deviceInfo={this.props.gadget.deviceInfo} />
                     </div>
                 </div>
             </div>
