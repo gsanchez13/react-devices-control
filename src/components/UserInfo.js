@@ -1,11 +1,16 @@
-import React, { Component, PropTypes } from 'react';
-import '../../styles/UserInfo.css';
+import React, { Component, PropTypes } from 'react'
+
+/** CSS */
+import '../styles/UserInfo.css'
+
+import Placeholder from '../assets/img/user.svg'
 
 class UserInfo extends Component {
-    render() {
+    render() { 
+        const img = this.props.userInfo.url || Placeholder
         return (
             <div style={this.props.style || {}} className={`user-avatar ${this.props.className || ''}`}>
-                <img src={this.props.userInfo.url} alt="User" />
+                <img src={img} alt="User" />
                 <p>{this.props.userInfo.name}<br />{this.props.userInfo.email}</p>
             </div>
         );
@@ -18,4 +23,4 @@ UserInfo.propTypes = {
     className: PropTypes.string
 };
 
-export default UserInfo;
+export default UserInfo

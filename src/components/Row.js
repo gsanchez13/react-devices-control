@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react'
 
 
 class Row extends Component {
@@ -17,4 +17,4 @@ Row.propTypes = {
     value: PropTypes.string,
 };
 
-export default Row;
+export default Row

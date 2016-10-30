@@ -1,12 +1,6 @@
-import React, { Component } from 'react';
-import Request from 'react-http-request';
-import ResultBodyCard from '../components/ResultBodyCard';
-//import MainHeader from './components/MainHeader'
-//import SearchBar from './components/SearchBar'
-
-//import '../assets/App.css';
-//import '../assets/bootstrap.min.css';
-//import '../assets/bootstrap.min.css';
+import React, { Component } from 'react'
+import Request from 'react-http-request'
+import ResultBodyCard from '../components/ResultBodyCard'
 
 class CardListContainer extends Component {
 
@@ -35,4 +29,4 @@ class CardListContainer extends Component {
     }
 }
 
-export default CardListContainer;
+export default CardListContainer
