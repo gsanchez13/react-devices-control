@@ -15,11 +15,21 @@ class ActionMenu extends Component {
                 iconButtonElement={<IconButton><MoreVertIcon /></IconButton>}
                 anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
                 targetOrigin={{ horizontal: 'right', vertical: 'top' }}>
-                <MenuItem primaryText="Solicitar Device" />
-                <MenuItem primaryText="Não está comigo" />
+                {
+                    this.props.showFirstItem && <MenuItem primaryText="Solicitar Device" />
+                }
+                {
+                    this.props.showSecondItem && <MenuItem primaryText="Não está comigo" />
+                }
             </IconMenu>
         );
     }
+}
+
+
+ActionMenu.propTypes = {
+    showFirstItem: React.PropTypes.bool,
+    showSecondItem: React.PropTypes.bool
 }
 
 export default ActionMenu

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import CardListContainer from './containers/CardListContainer';
+import App from './containers/App';
 import './index.css';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
@@ -12,7 +12,7 @@ injectTapEventPlugin();
 
 ReactDOM.render(
   <MuiThemeProvider>
-    <CardListContainer />
+    <App />
   </MuiThemeProvider>,
   document.getElementById('root')
 );

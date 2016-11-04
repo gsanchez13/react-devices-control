@@ -10,6 +10,8 @@ import '../styles/Gadget.css'
 class Gadget extends Component {
 
     render() {
+        const showFirstItem = (this.props.userInfo && this.props.userInfo.googleId !== "0") && (this.props.userInfo && this.props.userInfo.googleId !== (this.props.logged && this.props.logged.googleId))
+        const showSecondItem = (this.props.userInfo && this.props.userInfo.googleId === (this.props.logged && this.props.logged.googleId));
 
         return (
             <Card className="Card-content">
@@ -23,20 +25,16 @@ class Gadget extends Component {
                             <div className="User-mail">
                                 {this.props.userInfo.email}
                             </div>
-                            <ActionMenu />
+                            {
+                                (showFirstItem || showSecondItem) ?
+                                    <ActionMenu showFirstItem={showFirstItem} showSecondItem={showSecondItem} />
+                                    : null
+                            }
                         </div>
                         :
                         <div>
-                            <UserInfo userInfo={
-                                {
-                                    url
-                                }
-                            } className="User-picture" />
                             <div className="User-info">
-                                Xuxa
-                            </div>
-                            <div className="User-mail">
-                                xuxa@pele.com
+                                Ainda não cadastrado
                             </div>
                         </div>
                     }
@@ -50,7 +48,7 @@ class Gadget extends Component {
     }
 }
 
-Card.propTypes = {
+Gadget.propTypes = {
     userInfo: React.PropTypes.object,
     deviceInfo: React.PropTypes.object,
     platform: React.PropTypes.number.isRequired
