@@ -3,11 +3,38 @@ import UserInfo from './UserInfo'
 import DeviceInfo from './DeviceInfo'
 import ActionMenu from './ActionMenu'
 import { Card, CardHeader, CardText } from 'material-ui/Card'
+import axios from 'axios';
 
 /** CSS */
 import '../styles/Gadget.css'
 
 class Gadget extends Component {
+
+    functionFirstItem = () => {
+        axios.post(`http://172.16.57.242:3080/push/${this.props.pin}`, {
+            "type": 1,
+            "userInfo": this.props.userInfo
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
+
+    functionSecondItem = () => {
+        axios.post(`http://172.16.57.242:3080/push/${this.props.pin}`, {
+            "type": 2,
+            "userInfo": this.props.userInfo
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
+    }
 
     render() {
         const showFirstItem = (this.props.userInfo && this.props.userInfo.googleId !== "0") && (this.props.userInfo && this.props.userInfo.googleId !== (this.props.logged && this.props.logged.googleId))
@@ -26,9 +53,10 @@ class Gadget extends Component {
                                 {this.props.userInfo.email}
                             </div>
                             {
-                                (showFirstItem || showSecondItem) ?
-                                    <ActionMenu showFirstItem={showFirstItem} showSecondItem={showSecondItem} />
-                                    : null
+                                showFirstItem && <ActionMenu functionFirstItem={this.functionFirstItem} />
+                            }
+                            {
+                                showSecondItem && <ActionMenu functionSecondItem={this.functionSecondItem} />
                             }
                         </div>
                         :
@@ -49,6 +77,7 @@ class Gadget extends Component {
 }
 
 Gadget.propTypes = {
+    pin: React.PropTypes.string,
     userInfo: React.PropTypes.object,
     deviceInfo: React.PropTypes.object,
     platform: React.PropTypes.number.isRequired

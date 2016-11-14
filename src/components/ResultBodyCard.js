@@ -14,7 +14,7 @@ class ResultBodyCard extends Component {
                     this.props.list.map((card) => {
                         return (
                             <div key={card.pin} className="Card-container">
-                                <Gadget userInfo={card.userInfo} deviceInfo={card.deviceInfo} platform={card.platform} logged={this.props.logged}/>
+                                <Gadget userInfo={card.userInfo} deviceInfo={card.deviceInfo} platform={card.platform} pin={card.pin} logged={this.props.logged} />
                             </div>
                         )
                     })

@@ -20,7 +20,8 @@ class CardListContainer extends Component {
                         if (loading) {
                             return <div>loading...</div>;
                         } else {
-                            return <ResultBodyCard list={result.body} logged={this.props.logged}/>
+                            if (!this.props.logged) return <div></div>
+                            return <ResultBodyCard list={result.body} logged={this.props.logged} />
                         }
                     }
                 }

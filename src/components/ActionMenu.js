@@ -16,10 +16,10 @@ class ActionMenu extends Component {
                 anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
                 targetOrigin={{ horizontal: 'right', vertical: 'top' }}>
                 {
-                    this.props.showFirstItem && <MenuItem primaryText="Solicitar Device" />
+                    this.props.functionFirstItem && <MenuItem primaryText="Solicitar Device" onClick={this.props.functionFirstItem} />
                 }
                 {
-                    this.props.showSecondItem && <MenuItem primaryText="Não está comigo" />
+                    this.props.functionSecondItem && <MenuItem primaryText="Não está comigo" onClick={this.props.functionSecondItem} />
                 }
             </IconMenu>
         );
@@ -28,8 +28,8 @@ class ActionMenu extends Component {
 
 
 ActionMenu.propTypes = {
-    showFirstItem: React.PropTypes.bool,
-    showSecondItem: React.PropTypes.bool
+    functionFirstItem: React.PropTypes.func,
+    functionSecondItem: React.PropTypes.func,
 }
 
 export default ActionMenu
